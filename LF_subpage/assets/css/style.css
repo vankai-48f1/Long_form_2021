@@ -166,12 +166,12 @@ header {
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
+  /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10; */
 }
 
 .header__menu {
@@ -425,18 +425,23 @@ a.header-side__icon {
 
 /* ---- End Background opacity and Header fixed side */
 
-.intro__content {
+.intro {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: flex-end;
+  flex-direction: column;
+}
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
+.intro__content-ctn {
+  flex: 1;
+  position: relative;
   width: 100%;
-  padding: 0 15px;
+}
+
+.intro__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .intro__desc {
@@ -449,16 +454,16 @@ a.header-side__icon {
   margin-bottom: 10%;
 }
 
-.intro__image {
-  flex: 1;
-  text-align: right;
-  width: calc(100% / 3);
+.intro__content {
+  width: 100%;
   height: 100%;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  padding: 20% 0 8%;
-  transform: translateX(-50%);
+  padding: 5% 0;
+}
+
+.intro__image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .intro__image img {
@@ -518,25 +523,25 @@ a.header-side__icon {
   .header__menu-bar-mb {
     display: block;
     text-align: right;
-    margin: 25px 0;
+    margin-bottom: 25px;
   }
 
   .intro__content {
-    position: static;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    padding: 0 30px 5%;
   }
 
   .intro__image {
     flex: 1;
     text-align: center;
-    width: 100%;
+    /* width: 100%;
     height: 55%;
     position: absolute;
     left: 0;
     bottom: 24%;
-    padding: 0 20px;
+    padding: 0 20px; */
+    position: static;
+    padding: 0;
+    transform: none;
   }
 
   .intro__desc {
@@ -551,11 +556,16 @@ a.header-side__icon {
     width: 100%;
     height: 100%;
   }
+
+  .header {
+    position: static;
+    padding: 5% 0;
+  }
 }
 
 @media (max-width: 576px) {
   .header__menu li a {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.85rem + 1vw);
   }
 
   .intro__image {
