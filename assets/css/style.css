@@ -183,16 +183,30 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding-top: 80px;
+}
+
+.header__menu li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .header__menu li a {
   font-family: var(--font-second);
   font-size: 20px;
-  display: inline-block;
-  padding: 5px 10px;
+  display: inline;
+  line-height: 1.7;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: 1px solid transparent;
+}
+
+.header__menu li.active a,
+.header__menu li a:not(.header__menu-bar-box):hover {
+  border-bottom-color: #bd9458;
+  color: transparent;
 }
 
 .header__menu-bar-mb {
@@ -201,8 +215,8 @@ header {
 
 .header__menu-bar {
   display: inline-block;
-  width: calc(15px * 1.8);
-  height: 15px;
+  width: calc(18px * 1.8);
+  height: 18px;
 
   background-image: url("../images/Menu-Bar.svg");
   background-size: contain;
@@ -443,18 +457,20 @@ a.header-side__icon {
 .intro__image {
   flex: 1;
   text-align: right;
-  width: 33%;
-  height: 64%;
+  width: calc(100% / 3);
+  height: 100%;
   position: absolute;
-  left: 26%;
-  bottom: 12%;
+  left: 50%;
+  bottom: 0;
+  padding: 20% 0 8%;
+  transform: translateX(-50%);
 }
 
 .intro__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: right;
+  object-position: center bottom;
   display: inline-block;
 }
 
@@ -951,6 +967,10 @@ a.header-side__icon {
   padding-top: 62.7%;
 }
 
+.slider__fourth-list .slider__fourth-item {
+  display: block !important;
+}
+
 .slider__fourth-text-left img,
 .slider__fourth-text-right img {
   height: 100%;
@@ -1044,8 +1064,15 @@ a.header-side__icon {
   object-position: center;
 }
 
+/* ---- Section Address Bottom ----- */
+/* ---- Section Address Bottom ----- */
+/* ---- Section Address Bottom ----- */
+/* ---- Section Address Bottom ----- */
+/* ---- Section Address Bottom ----- */
+
 .ss-address {
   position: relative;
+  background-color: #101726;
 }
 
 .slider__fourth-item-thumb-bg-content {
@@ -1063,23 +1090,27 @@ a.header-side__icon {
   content: "";
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 25%;
   z-index: 5;
 }
 
 .ss-address::before {
   left: 0;
-  background: url("../images/bg-add-left.png") center no-repeat;
+  background: url("../images/bg-add-left.png") left top/contain no-repeat;
+  width: calc(100% / 3);
+  height: 100%;
 }
 
 .ss-address::after {
   right: 0;
-  background: url("../images/bg-add-right.png") center no-repeat;
+  top: initial;
+  bottom: 0;
+  background: url("../images/bg-add-right.png") right bottom/contain no-repeat;
+  height: 80%;
+  width: calc(100% / 3);
 }
 
 .ss-address__content {
-  font-family: var(--font-prm-medium);
+  font-family: var(--font-second);
   font-size: 18px;
   padding: 50px;
 
@@ -1093,8 +1124,23 @@ a.header-side__icon {
 
 .ss-address__content h3 {
   font-size: 18px;
-  color: #aa752a;
   text-transform: uppercase;
+}
+
+.ss-address__logo {
+  position: relative;
+  padding-top: 54%;
+  width: 100%;
+}
+
+.ss-address__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* LONG FORM PAGE 2 */
