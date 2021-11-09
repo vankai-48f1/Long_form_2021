@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
 
     }
 
-    function activeDotCustom(itemDotCustom, containerSlide, slide) {
+    function activeDotCustom(itemDotCustom, containerSlide, slide, dotDataNumber ) {
         jQuery(document).on('click', itemDotCustom, function (e) {
             e.stopPropagation();
 
@@ -68,9 +68,11 @@ jQuery(document).ready(function () {
 
         })
 
-        jQuery(slide).on('afterChange', function (event, slick, direction) {
-            let dotNumber = jQuery(this).closest(containerSlide).find('.slider__dots li.slick-active .dot-number').attr('data-number');
+        dotDataNumber ? dotDataNumber : '.slider__dots li.slick-active .dot-number';
 
+        jQuery(slide).on('afterChange', function (event, slick, direction) {
+            let dotNumber = jQuery(this).closest(containerSlide).find(dotDataNumber).attr('data-number');
+            console.log(dotNumber);
             jQuery(this).closest(containerSlide).find('.dots-custom li').removeClass('slick-active');
 
             jQuery(this).closest(containerSlide).find('.dots-custom li[data-number="' + dotNumber + '"]').addClass('slick-active');
@@ -123,7 +125,11 @@ jQuery(document).ready(function () {
     activeDotCustom('.slider-lf2__second .dots-custom li', '.slider-container', '.slider-lf2__second-list');
 
     // createListDotCustom('.slider-lf2__fifth-list .slider-lf2__fifth-item', '.slider-container');
-    // activeDotCustom('.slider-lf2__fifth-dots .slider__dots li', '.slider-container', '.slider-lf2__fifth-list');
+    // activeDotCustom('.slider-lf2__fifth .dots-custom li', '.slider-container', '.slider-lf2__fifth-list', '.slider-lf2__fifth-dots .slider__dots li.slick-active .dot-number');
+
+    // createListDotCustom('.slider-lf2__fifth-list-mb .slider-lf2__fifth-item', '.slider-container');
+    // activeDotCustom('.slider-lf2__fifth-dots-mb .slider__dots li', '.slider-container', '.slider-lf2__fifth-list-mb');
+
 
     // custom dot logo slide fifth - long form 2
 
@@ -142,7 +148,7 @@ jQuery(document).ready(function () {
         let offsetTopSlide = jQuery(slideNam).offset().top;
 
         let dotSlide = jQuery(this).closest('.slider-container').find('.slider-lf2__fifth-list .slick-dots li[data-slide-num="' + numberDotCustom + '"]');
-
+        // console.log(dotSlide);
         dotSlide.trigger('click');
 
         jQuery("html,body").scrollTop(offsetTopSlide)
@@ -161,6 +167,7 @@ jQuery(document).ready(function () {
     // long form 2
     const heightImageSlideLf2Prm = jQuery('.slider-lf2__prm-product').outerHeight();
     const heightImageSlideLf2Third = jQuery('.slider-lf2__third-thumb-prd').outerHeight();
+    const heightSlideLf2ThirdDesc = jQuery('.slider-lf2__third-thumb-prd .slider-lf2__prm-desc-content').outerHeight();
 
 
     jQuery('.slider__prm .slick-prev').css('top', heightImageSlidePrm / 2 + 'px');
@@ -197,6 +204,9 @@ jQuery(document).ready(function () {
 
         jQuery('.slider-lf2__third .slick-prev').css('bottom', (heightImageSlideLf2Third / 2) + 'px');
         jQuery('.slider-lf2__third .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + 'px');
+
+        jQuery('.slider-lf2__fourth .slick-prev').css('bottom', (heightImageSlideLf2Third / 2) + (heightSlideLf2ThirdDesc / 2) + 'px');
+        jQuery('.slider-lf2__fourth .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + (heightSlideLf2ThirdDesc / 2) +'px');
     } else {
 
         jQuery('.slider-lf2__prm .slick-prev').css('left', offsetLeftWrap - 100 + 'px');
@@ -213,6 +223,11 @@ jQuery(document).ready(function () {
         jQuery('.slider-lf2__third .slick-next').css('right', offsetLeftWrap - 100 + 'px');
         jQuery('.slider-lf2__third .slick-prev').css('bottom', (heightImageSlideLf2Third / 2) + 100 + 'px');
         jQuery('.slider-lf2__third .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + 100 + 'px');
+
+        jQuery('.slider-lf2__fourth .slick-prev').css('left', offsetLeftWrap - 100 + 'px');
+        jQuery('.slider-lf2__fourth .slick-next').css('right', offsetLeftWrap - 100 + 'px');
+        jQuery('.slider-lf2__fourth .slick-prev').css('bottom', (heightImageSlideLf2Third / 2) + 100 + 'px');
+        jQuery('.slider-lf2__fourth .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + 100 + 'px');
 
         // jQuery('.slider-lf2__fifth .slick-prev').css('left', offsetLeftWrap - 100 + 'px');
         // jQuery('.slider-lf2__fifth .slick-next').css('right', offsetLeftWrap - 100 + 'px');
