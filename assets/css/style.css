@@ -1233,6 +1233,10 @@ a.header-side__icon {
   padding-bottom: 15px;
 }
 
+.slider-lf2__prm-desc-col-wrap {
+    display: inline-block;
+}
+
 .slider-lf2__prm-desc-col--left {
   padding-top: 70px;
 }
@@ -1336,10 +1340,11 @@ a.header-side__icon {
 }
 
 .slider-lf2__prm-item--1 .slider-lf2-line-prm {
-  left: 50%;
-  transform: translateX(calc(-50% - 30px));
-  -webkit-transform: translateX(calc(-50% - 30px));
-  -moz-transform: translateX(calc(-50% - 30px));
+  left: 30px;
+  width: calc(100% + 80px);
+  transform: translateX(-55px);
+  -webkit-transform: translateX(-55px);
+  -moz-transform: translateX(-55px);
 }
 
 .slider-lf2__prm-item--2 .slider-lf2__prm-product-image {
@@ -1473,16 +1478,23 @@ a.header-side__icon {
   position: relative;
 }
 
+.slider-lf2__second .slider-lf2__prm-desc-col h2 {
+    display: inline-block;
+}
+
 .slider-lf2__second-border-bt::after {
   content: "";
   background: center/contain no-repeat
     url("../images/image_LF_2/slider-lf2-line-prm.png");
   position: absolute;
   bottom: -10px;
-  left: 0;
-  width: 100%;
+  left: 30px;
+  width: calc(100% + 80px);
   height: 19px;
   z-index: 1;
+  transform: translateX(-55px);
+  -webkit-transform: translateX(-55px);
+  -moz-transform: translateX(-55px);
 }
 
 .slider-lf2__second .slider__dots .slick-dots li {
