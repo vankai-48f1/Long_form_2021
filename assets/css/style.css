@@ -106,14 +106,31 @@ body {
 }
 
 .cl-prm-rgba {
-  background-image: linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  background-image: linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
+  background-image: -moz-linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #fece82 0%,
+    #9a6e2e 100%
+  );
+  background-image: -o-linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
+  background-image: -ms-linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
 }
 
 .cl-second-rgba {
   background-image: linear-gradient(to bottom, #fece82 0%, #c78a31 100%);
+  background-image: -moz-linear-gradient(to bottom, #fece82 0%, #c78a31 100%);
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #fece82 0%,
+    #c78a31 100%
+  );
+  background-image: -o-linear-gradient(to bottom, #fece82 0%, #c78a31 100%);
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -891,7 +908,7 @@ a.header-side__icon {
   display: none;
 }
 
-.slider__third-item-thumb-4mb {
+img.slider__third-item-thumb-4mb {
   display: none;
 }
 
@@ -1073,6 +1090,16 @@ a.header-side__icon {
   object-position: center;
 }
 
+.slider__fourth .slick-prev {
+    background-image: url("../images/arrow-left-light.svg");
+    left: 3%;
+}
+
+.slider__fourth .slick-next {
+    background-image: url("../images/arrow-right-light.svg");
+    right: 3%;
+}
+
 /* ---- Section Address Bottom ----- */
 /* ---- Section Address Bottom ----- */
 /* ---- Section Address Bottom ----- */
@@ -1234,7 +1261,7 @@ a.header-side__icon {
 }
 
 .slider-lf2__prm-desc-col-wrap {
-    display: inline-block;
+  display: inline-block;
 }
 
 .slider-lf2__prm-desc-col--left {
@@ -1345,6 +1372,7 @@ a.header-side__icon {
   transform: translateX(-55px);
   -webkit-transform: translateX(-55px);
   -moz-transform: translateX(-55px);
+  max-width: 505px;
 }
 
 .slider-lf2__prm-item--2 .slider-lf2__prm-product-image {
@@ -1425,8 +1453,9 @@ a.header-side__icon {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 100%;
   height: 19px;
+  max-width: 505px;
 }
 
 .slider-lf2__prm-product-image--mb {
@@ -1479,7 +1508,7 @@ a.header-side__icon {
 }
 
 .slider-lf2__second .slider-lf2__prm-desc-col h2 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .slider-lf2__second-border-bt::after {
@@ -2264,6 +2293,9 @@ a.header-side__icon {
   transition: transform 550ms ease;
   -webkit-transition: transform 550ms ease;
   -moz-transition: transform 550ms ease;
+  width: 74%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .main-page__open {
@@ -2513,6 +2545,7 @@ a.header-side__icon {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  padding: 0 25px;
 }
 
 .main-page .slick-prev,

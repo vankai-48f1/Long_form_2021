@@ -189,11 +189,11 @@ jQuery(document).ready(function () {
     if (jQuery(window).width() < 1024) {
 
         const heightImageSlideSecond = jQuery('.slider__second-item-thumb img').height();
-        const heightImageSlideFourth = jQuery('.slider__second-item-thumb img').height();
+        const heightImageSlideFourth = jQuery('.slider__fourth-item-thumb-bg img').height();
 
 
         jQuery('.slider__second .slick-arrow').css('top', heightImageSlideSecond / 2 + 'px');
-        // jQuery('.slider__second .dots-custom').css('top', heightImageSlideSecond + 'px');
+        jQuery('.slider__fourth .slick-arrow').css('top', heightImageSlideFourth / 2 + 'px');
 
         // position arrow slide long form 2
         jQuery('.slider-lf2__prm .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
