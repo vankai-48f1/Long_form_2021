@@ -5,7 +5,7 @@ jQuery(document).ready(function () {
         jQuery(sliderContainer).slick({
             dots: true,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             // autoplay: true,
@@ -40,22 +40,27 @@ jQuery(document).ready(function () {
         let i = 0;
 
         listSlideItem.each((index, item) => {
-            ++i;
+            i++;
 
-            let itemSlideCurrent = jQuery(item).closest('.slick-slide');
-            let itemDot = '<li data-number="' + i + '"><button type="button"></button></li>';
-            if (itemSlideCurrent.hasClass('slick-current')) itemDot = '<li data-number="' + i + '" class="slick-active"><button type="button"></button></li>';
+            let notSlideClone = jQuery(item).closest('.slick-slide');
 
-            let containerDot = jQuery(item).closest(containerSlide).find(".dots-custom");
+            // console.log(!notSlideClone.hasClass('slick-cloned'));
+            if (!notSlideClone.hasClass('slick-cloned')) {
 
-            containerDot.append(itemDot);
+                let dataNumber = Number(jQuery(item).attr('data-number'));
+                let itemDot = '<li data-number="' + dataNumber + '"><button type="button"></button></li>';
 
+                if (notSlideClone.hasClass('slick-current')) itemDot = '<li data-number="' + dataNumber + '" class="slick-active"><button type="button"></button></li>';
 
+                let containerDot = jQuery(item).closest(containerSlide).find(".dots-custom");
+
+                containerDot.append(itemDot);
+            }
         })
 
     }
 
-    function activeDotCustom(itemDotCustom, containerSlide, slide, dotDataNumber ) {
+    function activeDotCustom(itemDotCustom, containerSlide, slide, dotDataNumber) {
         jQuery(document).on('click', itemDotCustom, function (e) {
             e.stopPropagation();
 
@@ -68,7 +73,7 @@ jQuery(document).ready(function () {
 
         })
 
-        dotDataNumber ? dotDataNumber : '.slider__dots li.slick-active .dot-number';
+        dotDataNumber ? dotDataNumber : dotDataNumber = '.slider__dots li.slick-active .dot-number';
 
         jQuery(slide).on('afterChange', function (event, slick, direction) {
             let dotNumber = jQuery(this).closest(containerSlide).find(dotDataNumber).attr('data-number');
@@ -101,6 +106,9 @@ jQuery(document).ready(function () {
 
     singleSlider('.slider-lf2__third-list');
     singleSlider('.slider-lf2__fifth-list');
+
+
+    
     // Custom dot slick
     // Custom dot slick
     // Custom dot slick
@@ -206,7 +214,7 @@ jQuery(document).ready(function () {
         jQuery('.slider-lf2__third .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + 'px');
 
         jQuery('.slider-lf2__fourth .slick-prev').css('bottom', (heightImageSlideLf2Third / 2) + (heightSlideLf2ThirdDesc / 2) + 'px');
-        jQuery('.slider-lf2__fourth .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + (heightSlideLf2ThirdDesc / 2) +'px');
+        jQuery('.slider-lf2__fourth .slick-next').css('bottom', (heightImageSlideLf2Third / 2) + (heightSlideLf2ThirdDesc / 2) + 'px');
     } else {
 
         jQuery('.slider-lf2__prm .slick-prev').css('left', offsetLeftWrap - 100 + 'px');
