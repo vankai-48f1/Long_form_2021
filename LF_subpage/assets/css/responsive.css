@@ -768,4 +768,9 @@
   .main-page__open-content {
     width: 75%;
   }
+
+  .intro__image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }

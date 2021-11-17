@@ -88,7 +88,7 @@ jQuery(document).ready(function () {
     jQuery('.main-page__collection-mb-slide').slick({
         dots: true,
         arrows: true,
-        infinite: false,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         // autoplay: true,

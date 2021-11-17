@@ -881,11 +881,22 @@
     justify-content: center;
   }
 
+  .slider__prm .slider__dots .slick-dots,
+  .slider-lf2__prm .slider__dots .slick-dots,
+  .slider-lf2__fifth-dots-mb .slider__dots .slick-dots {
+    justify-content: center;
+  }
+
   .slider-lf2__prm-desc-title::after {
     width: 100%;
   }
 
   .ss-single-lf2__ss-4-title {
-      padding: 58px 0 40px;
+    padding: 58px 0 40px;
+  }
+
+  .intro__image img {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
