@@ -456,6 +456,18 @@
 
   .header__menu li a {
     display: block;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 3px;
+  }
+
+  .header__menu li a span {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .header__menu li.active a ,
+  .header__menu li a:not(.header__menu-bar-box):hover {
+    border-bottom-color: #bd9458;
   }
 
   .header__menu li a br {
