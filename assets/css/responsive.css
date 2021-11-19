@@ -911,4 +911,13 @@
     max-width: 90%;
     margin: 0 auto;
   }
+
+  .btn-back-to-top {
+      width: 45px;
+      height: 45px;
+  }
+
+  .slider-lf2__prm .slider-lf2__prm-product-content {
+      height: 100%;
+  }
 }

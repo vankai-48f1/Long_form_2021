@@ -27,7 +27,7 @@ jQuery(document).ready(function () {
         jQuery(sliderContainer).slick({
             dots: true,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             // autoplay: true,
