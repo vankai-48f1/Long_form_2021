@@ -1068,12 +1068,14 @@ img.slider__third-item-thumb-4mb {
 
 .slider__fourth-logo {
   margin-bottom: calc(20px + 2%);
+  display: flex;
+  align-items: center;
 }
 
 .slider__fourth-logo img {
   margin: 0 auto;
   height: auto;
-  width: 17vw;
+  width: 50%;
   object-fit: contain;
 }
 
