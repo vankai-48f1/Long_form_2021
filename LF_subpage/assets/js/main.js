@@ -33,26 +33,6 @@
 
     })
 
-$('.carousel_1').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-   	navText:["<div><img src='./assets/images/images-page4/arrow_left.png' alt='lỗi'></div>","<div><img src='./assets/images/images-page4/arrow_right.png' alt='lỗi'></div>"],
-    autoplay:true,
-   	autoplayTimeout:5000,
-    autoplayHoverPause:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
 
 $('.carousel_2').owlCarousel({
     loop:true,

@@ -108,7 +108,7 @@ body {
 .cl-prm-rgba {
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 
   background-image: linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
   background-image: -moz-linear-gradient(to bottom, #fece82 0%, #9a6e2e 100%);
@@ -133,7 +133,7 @@ body {
 
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .style-title-prm {
@@ -220,7 +220,7 @@ header {
 }
 
 .header__menu li a:hover {
-    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .header__menu li a span {
@@ -237,7 +237,7 @@ header {
 .header__menu li.active a span,
 .header__menu li a:not(.header__menu-bar-box):hover span {
   border-bottom-color: #bd9458;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .header__menu-bar-mb {
