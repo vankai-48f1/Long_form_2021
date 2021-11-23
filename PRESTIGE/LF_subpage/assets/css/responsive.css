@@ -789,4 +789,9 @@
     max-width: 90%;
     margin: 0 auto;
   }
+  
+  .btn-back-to-top {
+      width: 45px;
+      height: 45px;
+  }
 }

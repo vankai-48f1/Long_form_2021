@@ -496,6 +496,10 @@
     max-width: 380px;
     margin: 0 auto;
   }
+  
+  .slider-lf2__second .slider-lf2__prm-desc {
+      padding: 0;
+  }
 
   .slider-lf2__prm-desc-wrap {
     max-width: 380px;
