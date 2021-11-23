@@ -538,7 +538,7 @@ a.header-side__icon {
 
 .content-author {
     animation-name: animation-img;
-	animation-duration: 7s;
+	animation-duration: 4s;
 }
 
 .content-author img {
@@ -562,7 +562,7 @@ a.header-side__icon {
 .text-author2 {
     font-family: Mallory;
     text-align: justify;
-    padding: 0 70px;
+    padding: 0 25px;
     font-size: 17px;
     margin-top: 30px;
     line-height: 1.3;
@@ -570,7 +570,7 @@ a.header-side__icon {
 
 .content-author2 {
     animation-name: animation-img2;
-	animation-duration: 7s;
+	animation-duration: 4s;
 }
 
 .img_author2 {
@@ -617,6 +617,10 @@ a.header-side__icon {
         width: 45%;
         bottom: 253px;
   }
+  
+    .content-author2 {
+  		margin-top: 30px;
+  	}
 }
 
 @media(max-width: 375px) {
@@ -627,19 +631,28 @@ a.header-side__icon {
 
 /* phẩm vi quý hiếm */
 .background-rare {
-    background-image: url(../images/images-page3/img_22.png);
-    width: 100%;
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 100%;
+	position: relative;
+}
+
+.img-rare4 {
+	width: 100%;
+	height: auto;
 }
 
 .content-rare {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
+    position: absolute;
+    top: 60px;
+}
+
+.content-rare img {
+	height: 155px;
+}
+
+.img-rare5 {
+	margin-top: 85px;
 }
 
 .content-rare h1 {
@@ -654,7 +667,6 @@ a.header-side__icon {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: -332px;
     padding-bottom: 3%;
     position: relative;
 }
@@ -735,8 +747,12 @@ a.header-side__icon {
         font-size: 70px;
     }
 
+    .img-rare5 {
+    	margin-top: 30px;
+    }
+
     .background-rare2 {
-        margin-top: -210px;
+        margin-top: 245px;
     }
 
     .background-rare3 {
@@ -765,8 +781,8 @@ a.header-side__icon {
 }
 
 @media(max-width: 991px) {
-    .background-rare {
-        padding-top: 25px;
+	.background-rare2 {
+        margin-top: 200px;
     }
 
     .background-rare3 {
@@ -780,6 +796,7 @@ a.header-side__icon {
 
     .content-rare {
         display: unset;
+        top: 30px;
     }
 
     .content-rare h1 {
@@ -803,10 +820,6 @@ a.header-side__icon {
 }
 
 @media(max-width: 768px) {
-    .background-rare2 {
-        margin-top: 50px;
-    }
-
     .background-rare3 {
         margin-left: auto;
     }
@@ -817,10 +830,6 @@ a.header-side__icon {
 }
 
 @media(max-width: 736px) {
-    .background-rare2 {
-        margin-top: 70px;
-    }
-
     .background-rare3 {
         margin-left: auto;
     }
@@ -831,12 +840,16 @@ a.header-side__icon {
 }
 
 @media(max-width: 414px) {
+	.content-rare {
+		top: 15px;
+	}
+
     .content-rare2 img {
       width: 80%;
     }
 
     .background-rare2 {
-        margin-top: -120px;
+        margin-top: 115px;
     }
 
     .background-rare3 {
@@ -2756,6 +2769,11 @@ img.slider__third-item-thumb-4mb {
   opacity: 1;
 }
 
+#customization,
+#img2 {
+	display: none;
+}
+
 @media(max-width: 1024px) {
     .slider__prm-col--logo {
       text-align: center;
@@ -2765,12 +2783,12 @@ img.slider__third-item-thumb-4mb {
 
     .slider__prm .slick-prev,
     .slider__third .slick-prev {
-        margin-top: 80px;
+        margin-top: 190px;
   }
 
     .slider__prm .slick-next,
     .slider__third .slick-next {
-        margin-top: 80px;
+        margin-top: 190px;
   }
 
   .slider__prm-col--desc {
@@ -2781,6 +2799,19 @@ img.slider__third-item-thumb-4mb {
         top: 650px !important;
   }
 }
+
+@media(max-width: 991px) {
+	#customization2,
+	#img1 {
+		display: none;
+	}
+
+	#customization,
+	#img2 {
+		display: block;
+	}
+}
+
 
 @media(max-width: 768px) {
   .dots-custom[style] {
@@ -2802,6 +2833,15 @@ img.slider__third-item-thumb-4mb {
   .dots-custom {
     display: none;
   }
+  
+  	#customization {
+		width: 100%;
+		height: auto;
+	}
+
+	.slider__prm-item-thumb {
+		padding-bottom: 55%;
+	}
 }
 
 /* Đặc quyền tinh hoa */
@@ -2882,6 +2922,12 @@ img.slider__third-item-thumb-4mb {
     .owl-dots {
         margin-top: 50px;
     }
+}
+
+@media(max-width: 450px) {
+  .content-privilege2 {
+      margin-top: 60px;
+  }
 }
 
 /* trải nghiệm */
