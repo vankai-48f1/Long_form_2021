@@ -28,13 +28,17 @@
 /* max-width: 1024px */
 
 @media (max-width: 1024px) {
+  .wrap-header {
+    padding-top: 0;
+    flex-wrap: wrap;
+  }
+
   .header__menu {
     flex-direction: column;
     align-items: center;
-    padding-top: 0;
   }
 
-  .header__menu .header__menu-bar {
+  .wrap-header .hamburger {
     display: none;
   }
 
@@ -42,6 +46,7 @@
     display: block;
     text-align: right;
     margin-bottom: 25px;
+    width: 100%;
   }
 
   .intro__content {
@@ -730,6 +735,11 @@
 }
 
 @media (max-width: 576px) {
+  /* header */
+  .intro-prestige .intro {
+    background-image: url("../images/intro/bg-intro-mb.png");
+  }
+
   .header__menu li a {
     font-size: calc(0.85rem + 1vw);
   }

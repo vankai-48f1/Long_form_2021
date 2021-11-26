@@ -1137,4 +1137,10 @@
   .border-brown {
       border-width: 5px;
   }
+
+  /* header */
+
+  .intro-prestige .intro {
+    background-image: url("../images/intro/bg-intro-mb.png");
+  }  
 }
