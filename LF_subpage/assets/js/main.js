@@ -53,3 +53,24 @@ $('.carousel_2').owlCarousel({
         }
     }
 })
+
+// back to top
+
+const buttonBackToTop = document.querySelector('.btn-back-to-top');
+
+if (buttonBackToTop)
+    window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+
+    if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+        buttonBackToTop.classList.add('show-btn')
+    } else {
+        buttonBackToTop.classList.remove('show-btn');
+    }
+}
+
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
