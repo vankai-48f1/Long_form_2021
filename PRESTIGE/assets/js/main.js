@@ -24,7 +24,7 @@ jQuery(document).ready(function () {
     }
 
 
-    function sliderCustomWithoutNumber(sliderContainer, appendDots, sliderItem) {
+    function sliderCustomWithText(sliderContainer, appendDots, sliderItem) {
         jQuery(sliderContainer).slick({
             dots: true,
             arrows: true,
@@ -36,12 +36,12 @@ jQuery(document).ready(function () {
             appendDots: jQuery(appendDots),
             customPaging: function (slider, i) {
 
-                let dot_logo = jQuery(slider.$slides[i]).find(sliderItem).attr("data-dot-logo");
+                let dot_name = jQuery(slider.$slides[i]).find(sliderItem).attr("data-name");
                 let number = jQuery(slider.$slides[i]).find(sliderItem).attr("data-number");
-                let views = `<div class="dot-logo" data-slide-name="${sliderContainer}"><span style="display: none;" class="dot-number" data-number="${number}"></span><img class="dot-img" src="${dot_logo}" alt=""></div>`;
+                let views = `<div class="dot-logo" data-slide-name="${sliderContainer}"><span class="dot-number" data-number="${number}">${number}</span><span class="dot-name"> ${dot_name}</span></div>`;
 
                 // return views;
-                return `${dot_logo ? views : ''}`;
+                return `${dot_name ? views : ''}`;
             }
         })
     }
@@ -126,7 +126,7 @@ jQuery(document).ready(function () {
     sliderCustom('.slider-lf2__second-list', '.slider-lf2__second .slider__dots', '.slider-lf2__prm-item');
     sliderCustom('.slider-lf2__fifth-list-mb', '.slider-lf2__fifth-dots-mb .slider__dots', '.slider-lf2__fifth-item');
 
-    sliderCustomWithoutNumber('.slider-lf2__third-list', '.slider-lf2__third .slider__dots', '.slider-lf2__third-item');
+    sliderCustom('.slider-lf2__third-list', '.slider-lf2__third .slider__dots', '.slider-lf2__third-item');
 
     // singleSlider('.slider-lf2__third-list');
     singleSlider('.slider-lf2__fifth-list');
@@ -188,6 +188,23 @@ jQuery(document).ready(function () {
     sliderCustom('.slider__cardhu-list', '.slider__cardhu .slider__dots', '.ss-cardhu__item');
     createListDotCustom('.slider__cardhu-list .ss-cardhu__item', '.slider-container');
     activeDotCustom('.slider__cardhu .dots-custom li', '.slider-container', '.slider__cardhu-list');
+
+    sliderCustomWithText('.slider__collections-prm-list', '.slider__collections-prm .slider__dots', '.prestige-double__item');
+    createListDotCustom('.slider__collections-prm-list .prestige-double__item', '.slider-container');
+    activeDotCustom('.slider__collections-prm .dots-custom li', '.slider-container', '.slider__collections-prm-list');
+
+    sliderCustomWithText('.collections__second-list', '.collections__second .slider__dots', '.collections__second-item');
+    createListDotCustom('.collections__second-list .collections__second-item', '.slider-container');
+    activeDotCustom('.collections__second .dots-custom li', '.slider-container', '.collections__second-list');
+
+    sliderCustomWithText('.collections__third-list', '.collections__third .slider__dots', '.collections__third-item');
+    createListDotCustom('.collections__third-list .collections__third-item', '.slider-container');
+    activeDotCustom('.collections__third .dots-custom li', '.slider-container', '.collections__third-list');
+
+    sliderCustomWithText('.collections__fourth-list', '.collections__fourth .slider__dots', '.collections__third-item');
+    createListDotCustom('.collections__fourth-list .collections__third-item', '.slider-container');
+    activeDotCustom('.collections__fourth .dots-custom li', '.slider-container', '.collections__fourth-list');
+
     // custom dot logo slide fifth - long form 2
 
     const quantitySlideFifthItem = jQuery('.slider-lf2__fifth-list .slick-dots li');
@@ -291,8 +308,13 @@ jQuery(document).ready(function () {
         const imgHalfLagavulin = jQuery('.slider__lagavulin .prestige-double__item-thumb img').height() / 2;
 
         // slider cardhu 
-
         const imgCardhu = jQuery('.ss-cardhu__img-product-wrap img').height();
+
+        // slider collections 
+        const imgCollectionsPrm = jQuery('.slider__collections-prm .prestige-double__item-thumb img').height();
+        const imgCollectionsSecond = jQuery('.collections__second .slider__talisker-prd-mb').height();
+        const imgCollectionsThird = jQuery('.collections__third-prd-wrap img').height();
+
 
         jQuery('.slider__second .slick-arrow').css('top', heightImageSlideSecond / 2 + 'px');
         // jQuery('.slider__fourth .slick-arrow').css('top', heightImageSlideFourth / 2 + 'px');
@@ -322,6 +344,11 @@ jQuery(document).ready(function () {
         positionArrowSlide('.slider__oban',imgHalfLagavulin, 0, 0, 0);
 
         positionArrowSlide('.slider__cardhu', 0, 0, imgCardhu / 2, 0);
+        // collections
+        positionArrowSlide('.slider__collections-prm', imgCollectionsPrm / 2, 0, 0, 0);
+        positionArrowSlide('.collections__second', imgCollectionsSecond / 2, 0, 0, 0);
+        positionArrowSlide('.collections__third', imgCollectionsThird / 2, 0, 0, 0);
+        positionArrowSlide('.collections__fourth', imgCollectionsThird / 2, 0, 0, 0);
 
     } else {
 

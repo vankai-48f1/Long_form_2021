@@ -56,12 +56,20 @@ hr {
   text-align: center;
 }
 
+.mtext-justify {
+  text-align: justify;
+}
+
 .mclear-both {
   clear: both;
 }
 
 .mflex-wrap {
   flex-wrap: wrap;
+}
+
+.mtext-bold {
+    font-weight: bold;
 }
 
 .bg-fixed {
@@ -557,6 +565,5 @@ object {
   padding: 10px 27px;
   border-radius: 5px;
 }
-
 
 /* grid system */
