@@ -322,7 +322,10 @@ jQuery(document).ready(function () {
         // position arrow slide long form 2
         // jQuery('.slider-lf2__prm .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
         // jQuery('.slider-lf2__prm .slick-next').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
-        positionArrowSlide('.slider-lf2__prm', 0, 0, (heightImageSlideLf2Prm / 2), 0);
+        const imgSlidePrmLf2 = jQuery('.slider-lf2__prm-list .slider-lf2__prm-product-image img').height();
+        const contentSlidePrmLf2 = jQuery('.slider-lf2__prm-list .slider-lf2__prm-item--1 .slider-lf2__prm-product-content').outerHeight(true);
+
+        positionArrowSlide('.slider-lf2__prm', 0, 0, contentSlidePrmLf2 + (imgSlidePrmLf2 / 2), 0);
 
         // jQuery('.slider-lf2__second .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
         // jQuery('.slider-lf2__second .slick-next').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');

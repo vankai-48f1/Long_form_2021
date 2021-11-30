@@ -184,6 +184,13 @@ jQuery(document).ready(function () {
     // Position dots custom slide primary
     jQuery('.slider__prm .dots-custom').css('top', heightImageSlidePrm - 50 + 'px');
 
+    function positionArrowSlide(slideName, top = 0, right = 0, bottom = 0, left = 0) {
+
+        if (top) jQuery( slideName + ' .slick-arrow').css('top', top + 'px');
+        if (right) jQuery( slideName + ' .slick-next').css('right', right + 'px');
+        if (bottom) jQuery( slideName + ' .slick-arrow').css('bottom', bottom + 'px');
+        if (left) jQuery( slideName + ' .slick-prev').css('left', left + 'px');
+    }
 
 
     if (jQuery(window).width() > 1140) {
@@ -199,13 +206,17 @@ jQuery(document).ready(function () {
         const heightImageSlideSecond = jQuery('.slider__second-item-thumb img').height();
         const heightImageSlideFourth = jQuery('.slider__fourth-item-thumb-bg img').height();
 
+        const imgSlidePrmLf2 = jQuery('.slider-lf2__prm-list .slider-lf2__prm-product-image img').height();
+        const contentSlidePrmLf2 = jQuery('.slider-lf2__prm-list .slider-lf2__prm-item--1 .slider-lf2__prm-product-content').outerHeight(true);
+
+        positionArrowSlide('.slider-lf2__prm', 0, 0, contentSlidePrmLf2 + (imgSlidePrmLf2 / 2), 0);
 
         jQuery('.slider__second .slick-arrow').css('top', heightImageSlideSecond / 2 + 'px');
         jQuery('.slider__fourth .slick-arrow').css('top', heightImageSlideFourth / 2 + 'px');
 
         // position arrow slide long form 2
-        jQuery('.slider-lf2__prm .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
-        jQuery('.slider-lf2__prm .slick-next').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
+        // jQuery('.slider-lf2__prm .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
+        // jQuery('.slider-lf2__prm .slick-next').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
 
         jQuery('.slider-lf2__second .slick-prev').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
         jQuery('.slider-lf2__second .slick-next').css('bottom', (heightImageSlideLf2Prm / 2) + 'px');
