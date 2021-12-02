@@ -28,6 +28,14 @@
 /* max-width: 1024px */
 
 @media (max-width: 1024px) {
+  .collections__second-inside .slider__fourth-desc-content {
+    padding-bottom: 0;
+  }
+
+  .collections__second-info {
+    margin-top: 0;
+  }
+
   .slider__lagavulin-col--product {
     flex: none;
   }
@@ -174,7 +182,7 @@
 
   .collections__second .collections__col-content {
     padding: 0;
-    flex: 1;
+    flex-grow: 1;
     height: auto;
   }
 
@@ -867,8 +875,8 @@
   }
 
   .slider-lf2__prm-desc-col--left {
-      padding-left: 15px;
-      padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .header {
@@ -913,7 +921,6 @@
 /* max-width: 991px */
 /* max-width: 991px */
 @media (max-width: 991px) {
-
   .ss-single-lf2__ss-4-gallery {
     grid-template-columns: repeat(2, 1fr);
   }

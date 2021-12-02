@@ -1294,7 +1294,7 @@ img.slider__third-item-thumb-4mb {
 
 .slider-lf2__prm-desc-content b {
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: block;
 }
 
@@ -1390,6 +1390,16 @@ img.slider__third-item-thumb-4mb {
   -webkit-transform: translateX(-55px);
   -moz-transform: translateX(-55px);
   max-width: 505px;
+}
+
+.slider-lf2__prm-item--1 .slider-lf2__prm-desc-col h2 br {
+    display: initial;
+}
+
+@media(min-width: 1025px) {
+    .slider-lf2__prm-item--1 .slider-lf2__prm-desc-col h2 br {
+        display: none;
+    }
 }
 
 .slider-lf2__prm-item--2 .slider-lf2__prm-product-image {

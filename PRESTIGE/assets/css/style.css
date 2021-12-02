@@ -1322,7 +1322,7 @@ img.slider__third-item-thumb-4mb {
 
 .slider-lf2__prm-desc-content b {
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: block;
 }
 
@@ -2855,8 +2855,9 @@ img.slider__third-item-thumb-4mb {
   height: auto;
 }
 
-:is(.port-ellen-single, .theSingleton) .slider__dots .dot-number {
-  display: none;
+:is(.port-ellen-single, .theSingleton) .slider__dots .dot-number { 
+    color: #fff;
+    border-color: #fff;
 }
 
 .port-ellen-single .slider__dots .slick-dots {
