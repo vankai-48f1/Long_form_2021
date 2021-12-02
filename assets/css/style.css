@@ -1274,6 +1274,7 @@ img.slider__third-item-thumb-4mb {
 .slider-lf2__prm-desc-col h2 {
   padding-left: 30px;
   padding-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .slider-lf2__prm-desc-col-wrap {
@@ -1346,7 +1347,7 @@ img.slider__third-item-thumb-4mb {
 .slider-lf2__prm-product-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: bottom;
 }
 
@@ -1445,7 +1446,7 @@ img.slider__third-item-thumb-4mb {
 
 .slider-lf2__prm-item--2 .slider-lf2__prm-bd-both-sides::before,
 .slider-lf2__prm-item--2 .slider-lf2__prm-bd-both-sides::after {
-  top: -20px;
+  top: 10px;
 }
 
 .slider-lf2__prm-item--3 .slider-lf2__prm-bd-both-sides::before,
@@ -1454,11 +1455,9 @@ img.slider__third-item-thumb-4mb {
 }
 
 .slider-lf2__prm-desc-title {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   padding-top: 70px;
-  margin: 0 0 25px;
-  font-family: var(--font-prm-medium);
-  font-size: 20px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -1468,7 +1467,7 @@ img.slider__third-item-thumb-4mb {
     url("../images/image_LF_2/slider-lf2-line-prm.png");
 
   position: absolute;
-  bottom: 0;
+  bottom: -11px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
