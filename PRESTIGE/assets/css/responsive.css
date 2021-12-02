@@ -28,50 +28,54 @@
 /* max-width: 1024px */
 
 @media (max-width: 1024px) {
-    .slider-lf2__prm .slider__dots .slick-dots {
-        justify-content: center;
-    }
+  .slider-lf2__prm .slider__dots .slick-dots {
+    justify-content: center;
+  }
 
-    .slider-lf2__prm-product-content {
-        z-index: 100;
-    }
+  .slider-lf2__prm-product-content {
+    z-index: 100;
+  }
 
-    .slider-lf2__prm-blank {
-        position: relative;
-        display: block;
-        z-index: 5;
-    }
+  .slider-lf2__prm-blank {
+    position: relative;
+    display: block;
+    z-index: 5;
+  }
 
-    .slider-lf2__prm-blank::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        z-index: -1;
-    }
+  .slider-lf2__prm-blank::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
 
-    .slider-lf2__prm-blank--bottom::before {
-        top: 0;
-        left: 0;
-        background: left top/contain no-repeat url('../images/prestige-image/prestige-mortlach-after.png');
-        height: calc(100% + 70px);
-    }
+  .slider-lf2__prm-blank--bottom::before {
+    top: 0;
+    left: 0;
+    background: left top/contain no-repeat
+      url("../images/prestige-image/prestige-mortlach-after.png");
+    height: calc(100% + 70px);
+  }
 
-    .slider-lf2__prm-blank--top::before {
-        top: 0;
-        right: 0;
-        background: right top/contain no-repeat url('../images/prestige-image/prestige-mortlach-before.png');
-        height: 100%;
-    }
+  .slider-lf2__prm-blank--top::before {
+    top: 0;
+    right: 0;
+    background: right top/contain no-repeat
+      url("../images/prestige-image/prestige-mortlach-before.png");
+    height: 100%;
+  }
 
   .slider-lf2__prm-item--2 .slider-lf2__prm-product-wrap,
   .slider-lf2__prm-item--3 .slider-lf2__prm-product-wrap {
     padding-top: 0;
   }
 
-  :is(.slider-lf2__prm-item--2, .slider-lf2__prm-item--3) .slider-lf2__prm-product-wrap::before {
+  :is(.slider-lf2__prm-item--2, .slider-lf2__prm-item--3)
+    .slider-lf2__prm-product-wrap::before {
     content: "";
     position: absolute;
-    background: right top/contain no-repeat url('../images/prestige-image/prestige-mortlach-before.png');
+    background: right top/contain no-repeat
+      url("../images/prestige-image/prestige-mortlach-before.png");
   }
 
   .slider-lf2__prm-blank-mb-top {
@@ -120,23 +124,27 @@
     padding-top: 20px;
     margin-bottom: 0;
     margin-top: 30px;
+    position: relative;
+  }
 
-    border: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
+  .collections__prm .prestige-double__desc-content h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(
       to left,
       #efd5ba 0%,
       #d2914e 32.81%,
       #e9caaa 68.75%,
       #a98055 100%
     );
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
   }
 
-  .collections__prm-desc-prd {
-    border-top: none;
+  .collections__prm-desc-prd::before {
+    content: none;
   }
 
   .collections__prm .slider__dots::before,
@@ -1300,7 +1308,7 @@
   }
 
   .slider-lf2__prm .slider-lf2__prm-product-content {
-    height: 100%;
+    height: auto;
   }
 
   .slider-lf2__prm-desc-content-mb {
@@ -1370,5 +1378,9 @@
 
   .caol-ila-single {
     padding: 10px;
+  }
+
+  .slider__collections-prm .slider__dots {
+      padding-bottom: 20px;
   }
 }
