@@ -1127,51 +1127,88 @@ a.header-side__icon {
 
 /*song hành tinh túy*/
 .bg-essence {
-  background-image: url(../images/images-page3-quyen2/img_1.png);
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 100%;
+    background-image: url(../images/images-page3-quyen2/img_1.png);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70%;
 }
 
 .title-essence {
-  padding-top: 70px;
-  margin-right: auto;
-  margin-left: auto;
+    padding-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .content-essence {
-  padding-top: 60px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+    padding-top: 60px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content-essence h1 {
-  font-family: Archivo;
-  color: #e8cc8e;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  border-top: 1px solid #e3a26b;
-  border-bottom: 1px solid #e3a26b;
-  padding: 10px 0;
+    font-family: Archivo;
+    color: #E8CC8E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-top: 1px solid #E3A26B;
+    border-bottom: 1px solid #E3A26B;
+    padding: 10px 0;
+    line-height: 1.5;
 }
 
 .content-essence p {
-  font-family: Mallory;
-  font-size: 18px;
-  color: black;
-  text-align: justify;
-  margin-top: 70px;
+    font-family: Mallory;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: justify;
+    margin-top: 70px;
+    filter: brightness(0.9);
 }
 
-@media (max-width: 991px) {
-  .content-essence {
-    width: 80%;
+@media(max-width: 1024px) {
+  .bg-essence {
+    padding-bottom: 85%;
   }
 }
+
+@media(max-width: 991px) {
+  .bg-essence {
+    padding-bottom: 100%;
+  }
+
+  .content-essence {
+      width: 80%;
+  }
+}
+
+@media(max-width: 450px) {
+  .bg-essence {
+    display: none;
+  }
+
+  .bg-essence2 {
+      background-image: url(../images/images-page3-quyen2/img_4.png);
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+  }
+
+  .content-essence {
+      width: 95%;
+      padding-top: 40px;
+  }
+
+  .content-essence p {
+      margin-top: 30px;
+  }
+}
+
 
 /* body page 4 */
 

@@ -20,6 +20,9 @@
     <!-- fontawesome -->
     <link rel="stylesheet" type="text/css" href="./assets/vendor/fontawesome-free-5.15.3-web/css/all.min.css">
 
+    <!-- animate -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+
     <!-- slick -->
     <link rel="stylesheet" href="./assets/slick/slick.css" />
     <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
@@ -75,7 +78,7 @@
         </div>
     </div>
 
-    <div class="intro-prestige">
+    <div class="intro-prestige wow animate__animated animate__fadeIn">
         <div class="intro bg-op full-w-h">
             <header>
                 <div class="header">
@@ -151,9 +154,9 @@
     <div class="background-imprint">
         <div class="main">
 
-            <img class="img2" src="./assets/images/dauan_quyen_2/img_3.png">
+            <img class="img2 wow animate__animated animate__fadeIn" src="./assets/images/dauan_quyen_2/img_3.png">
 
-            <p class="text-imprint">Mang đến bộ sưu tập quà tặng độc đáo, ấn tượng với công nghệ chạm khắc độc quyền
+            <p class="text-imprint wow animate__animated animate__fadeInUp">Mang đến bộ sưu tập quà tặng độc đáo, ấn tượng với công nghệ chạm khắc độc quyền
                 trên chai, Diageo Việt Nam hy vọng có thể truyền tải những thông điệp riêng đầy ý nghĩa mang đậm dấu ấn
                 cá nhân đến những người luôn đồng hành cùng bạn. Từng thông điệp, từng hình ảnh đều sẽ được tùy chỉnh
                 một cách tỉ mỉ nhất theo yêu cầu của quý khách hàng, để mỗi chai whisky không chỉ là món quà trân quý,
@@ -163,7 +166,7 @@
 
                 <section class="slider__prm">
                     <div class="wrap-sm">
-                        <div class="slider__dots"></div>
+                        <div class="slider__dots wow animate__animated animate__fadeInUp"></div>
                     </div>
 
 
@@ -171,18 +174,18 @@
                         <div class="slider__prm-list">
                             <div class="slider__prm-item" data-dot-logo="KHAI XUÂN BỨT PHÁ" data-number="1">
 
-                                <div class="slider__prm-item-thumb">
+                                <div class="slider__prm-item-thumb wow animate__animated animate__fadeIn">
                                     <img id="customization2" src="./assets/images/dauan_quyen_2/img_5.png">
 
                                     <img id="img3" src="./assets/images/dauan_quyen_2/img_2.png">
                                 </div>
 
                                 <div class="slider__prm-row">
-                                    <div class="slider__prm-col slider__prm-col--logo">
+                                    <div class="slider__prm-col slider__prm-col--logo wow animate__animated animate__fadeInLeft">
                                         <p>KHAI XUÂN BỨT PHÁ</p>
                                     </div>
 
-                                    <div class="slider__prm-col slider__prm-col--desc">
+                                    <div class="slider__prm-col slider__prm-col--desc wow animate__animated animate__fadeInRight">
                                         <p class="slider__prm-content style-text-prm">
                                             Được chế tác dành riêng cho dịp Tết Nhâm Dần – bộ sưu tập “Khai Xuân Bứt
                                             Phá” chính là món quà mừng năm mới ý nghĩa khi mang trên mình những biểu
@@ -334,11 +337,11 @@
 
 
     <!-- footer -->
-        <section class="ss-address">
-            <div class="wrap-sm">
-                <div class="mtext-center">
-                    <div class="ss-address__content">
-                        <!-- <div class="ss-address__row">
+    <section class="ss-address">
+        <div class="wrap-sm">
+            <div class="mtext-center">
+                <div class="ss-address__content wow animate__animated animate__fadeIn">
+                    <!-- <div class="ss-address__row">
                             <h3>ĐỊA CHỈ WALKER WHISKY BOUTIQUE</h3>
                             <p>74B Hai Bà Trưng, P. Bến Nghé, Q. 1, Tp. HCM</p>
                         </div>
@@ -349,19 +352,19 @@
                             <p>85 Thảo Điền, P. Thảo Điền, Q. 2, Tp.HCM</p>
                             <p>02 Cổ Tân, P. Tràng Tiền, Q. Hoàn Kiếm, Hà Nội</p>
                         </div> -->
-                        <div class="ss-address__logo">
-                            <img src="./assets/images/Logo-footer.png" alt="Logo-footer">
-                        </div>
-
-                        <div class="ss-address__row cl-white">
-                            <h3>Hotline CSKH</h3>
-                            <p>+84 902 152 777</p>
-                        </div>
-
+                    <div class="ss-address__logo">
+                        <img src="./assets/images/Logo-footer.png" alt="Logo-footer">
                     </div>
+
+                    <div class="ss-address__row cl-white">
+                        <h3>Hotline CSKH</h3>
+                        <p>+84 902 152 777</p>
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Background opacity -->
     <div class="bg-opacity-dark"></div>
@@ -376,6 +379,11 @@
     <!-- bootstrap -->
     <script src="./assets/vendor/bootstrap5/js/bootstrap.min.js"></script>
 
+    <script src="./assets/js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
     <!-- Thư Viện carousel js -->
     <script src="./assets/vendor/OwlCarousel/dist/owl.carousel.min.js"></script>
     <script src="./assets/slick/slick.js"></script>
